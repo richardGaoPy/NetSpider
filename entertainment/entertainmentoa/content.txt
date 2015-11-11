@@ -1,0 +1,1504 @@
+
+
+
+
+成都演唱会门票|2015百度糯米音乐盛典-永乐票务官方网站
+
+
+
+
+
+
+
+function getPath() {return "http://www.228.com.cn";}
+function getPath_fix() {return "http://www.228.com.cn";}
+
+
+
+var _trackData = _trackData || [];
+(function() {
+$.ajax({data : {},type : "POST",dataType : "json",async : false,url : getPath() + "/ajax/findCustomerIdForTongji",success : function(data){
+  		if(data != null){
+  			if(data.ajaxResponse!=null){
+		  		if(data.ajaxResponse == 1){_trackData.push(["userset", "userid", data.customerId]);}
+		    }
+	    }
+  	}
+});
+var phpstat_js = document.createElement('script'); phpstat_js.type = 'text/javascript'; 
+phpstat_js.charset = 'utf-8'; phpstat_js.id = 'phpstat_async_js_id_10000001'; phpstat_js.async = true;
+phpstat_js.src = '//static.228.com.cn/resources/js/10000001.js?version=20151023_16_12';
+var phpstat_cjs = document.getElementsByTagName('script')[0]; phpstat_cjs.parentNode.insertBefore(phpstat_js, phpstat_cjs);
+})();
+
+var _hmt =_hmt ||[];(function() {var hm =document.createElement("script");hm.src ="//hm.baidu.com/hm.js?0578294a14fae8ac90f4609ae2844eda";var s =document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+var cnzz_protocol =(("https:" ==document.location.protocol) ?" https://" :" http://");document.write(unescape("%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1256371297' type='text/javascript'%3E%3C/script%3E"));
+
+
+$(function(){loadData();});
+
+购物车({{if shopCartProducts}}{{shopCartProducts.length}}{{else}}0{{/if}})
+
+	
+	购物车为空，开始购物吧~
+	
+		{{each shopCartProducts as o index}}
+			
+			
+				
+					
+						{{if o.NAME.length > 16 }}
+							{{o.NAME.substring(0, 14) }}
+						{{else}}
+							{{o.NAME}}
+						{{/if}}
+					
+				
+			
+			 
+				
+					{{o.PLAYDATE}}&nbsp;{{o.TIME }}
+				
+			 
+			 
+				{{o.PRICE}} 元
+				{{o.num}}张
+				
+			  	  
+				  
+				  
+				
+				删除
+			
+		
+	{{/each}}
+
+
+	
+		共 {{if shopCartProducts}}{{shopCartProducts.length}}{{else}}0{{/if}} 件商品
+		总金额：{{#ylprices}} 元
+	
+	
+
+
+
+
+{{if !shopCartProducts}}
+ 	
+	
+	
+	
+		购物车为空，开始购物吧~
+	
+	{{else}}
+
+	
+		{{each shopCartProducts as o i}}
+			
+				
+					{{i + 1}}
+					
+						{{if o.NAME.length > 16 }}
+							{{o.NAME.substring(0, 14) }}
+						{{else}}
+							{{o.NAME}}
+						{{/if}}
+					
+				
+				{{o.PLAYDATE}}&nbsp;{{o.TIME}}
+				
+					{{o.PRICE}} 元
+					{{o.num}} 张
+					删除
+				
+			
+		{{/each}}
+	
+	
+		
+			共 {{if shopCartProducts}}{{shopCartProducts.length}}{{else}}0{{/if}} 件商品
+			总金额：{{ylprices}} 元
+		
+			
+	
+
+{{/if}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+登录
+
+
+
+
+
+
+账户名：
+
+
+
+
+
+
+
+
+密码：
+
+
+请输入密码
+
+
+
+&nbsp;
+
+账号或密码不正确！
+您的账号状态异常！
+账号不能为空！
+账号格式不正确！
+密码不能为空！
+密码不正确！
+忘记密码？
+
+
+
+验证码：
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+十天内免登录
+
+
+
+
+
+
+
+
+合作账户登录
+
+
+
+
+
+
+
+
+
+
+
+还不是永乐会员？立即注册
+
+
+var _adwq =_adwq ||[];_adwq.push(['_setAccount','wouu2']);_adwq.push(['_setDomainName','.228.com.cn']);_adwq.push(['_trackPageview']);(function() {var adw =document.createElement('script');adw.type ='text/javascript';adw.async =true;adw.src =('https:' ==document.location.protocol ?'https://ssl' :'http://s') + '.emarbox.com/js/adw.js';var s =document.getElementsByTagName('script')[0];s.parentNode.insertBefore(adw,s);})();
+$(function(){var lhref =location.href;if(lhref.indexOf("customer/reg.html") >0 ){var TopLoginReferUrl =document.referrer;if(TopLoginReferUrl ==''){TopLoginReferUrl ="/";}
+$("#TopLoginReferUrl").val(TopLoginReferUrl);}
+$('.shopcart-del').live('click',function(){var ppid =$(this).attr('ppid');var price =$(this).attr('price');var $boxs =$('.yl-shopcart-box-' + ppid);resetShopCart(ppid,0,function(data){if (data.status ==0) {var countpp =Number($boxs.find('.yl-shop-chat').val()) *Number(price);var $cartswitch =$('.cart-switch');var $count =Number($cartswitch.data('count')) - 1;$cartswitch.data('count',$count).text('购物车(' + $count + ')');$('.yl-shopcart-num').text($count);$('.shopProductNum').text($count);$('#shopProductNum').text($count);$("#cart-count").text($count);$('.cart-switch').text("购物车(" + $count + ")");$('.cart-count').text($count);$boxs.remove();$('.yl-shopcart-prices').text(data.total);$('.shopProductTotalPrice').text(data.total);$('.buycar-item1').each(function(i) {$(this).find('s').eq(0).text(i + 1);});$('.buycar').each(function(i) {$(this).find('span').eq(0).text(i + 1);});if (0 ===$count) {$('.yl-shopcart-total,.top-buy-btn').hide();$('.buycar-ft').hide();$($('.cart p').get(0)).show();$('.yl-shopcart-total').siblings('.fr').hide();$('.buycar-ft').siblings('.fr').hide();$('.t-dot').hide();$('.buycar-yes-list').hide();$('.buycar-yes').hide();$('#Jfbox .buycar').find('.l-dot').hide();} 
+}
+});return false;});$('.check-login').click(function(){var url =$(this).attr('href');$.getJSON('http://www.228.com.cn/ajax/isLogin.html',function(data){if(data){location.href =url;}else{$('#jump-login').minBox1({});}
+});return false;});setTimeout(function(){$('#top_ajax').load('http://www.228.com.cn/jsp/top_ajax.jsp?t='+(new Date()).getTime(),function(){$("#top-login-btn").attr("href","javascript:void(0);");$("#top-login-btn").unbind("click").bind("click",function(){location.href ='http://www.228.com.cn/customer/login.html?LoginReferUrl='+ location.href;});});var url ="http://www.228.com.cn/ajax/findpronum.html";$.get(url,function(data){if(null !=data &&data !=''){var html =[];$.each(data.fcitys,function(i,f){html.push("" + f.CITYNAME + "");html.push("");});$(".top_city").html(html.join(''));}
+});$.get('http://www.228.com.cn/jsp/caibei.jsp',function (data){var $caibei =$('#caibei');if (data !='' &&$.trim(data) !='') {$caibei.empty().append(data);} else {if ($caibei) {$caibei.remove();}
+}
+},'html');},1000);var urlLogin ="http://www.228.com.cn/ajax/getLoginImg";$.get(urlLogin,function(data){if(data.IMG){var loginImg =data.IMG;var loginUrl =data.URL;var loginRemark =data.REMARK;var colorValue =data.COLORVALUE;var loginImgInfo ='';$("#panel").css("background-color",colorValue);$("#panel_ad_id").append(loginImgInfo);}
+},'json');var url ="http://www.228.com.cn/ajax/getNotice";$.get(url,function(data){if(data.topMsg){$(".tongz").show();$(".tongz .leftMsg").html(data.topMsg);$(".tongz").slideDown("3000");$('#header-close img').attr('src','http://static.228.com.cn/resources/images/header-close.gif');}
+},'json');$("#header-close").click(function(){$(".tongz").hide();});});function reloadImage(o){var img =document.getElementById(o);img.src ="http://www.228.com.cn/jsp/common/image.jsp?rm=" + Math.random();$("img[class='imagCode']").each(function(){$(this).attr("src",img.src);});}
+function setValuesInt(dom,starts,ends,resetsession,totaldom){var $input,val,ppid =$(dom).attr('ppid'),price =parseInt($(dom).attr('price'));if (resetsession) {$input =$('.yl-shop-chat[ppid="' + ppid + '"]');val =$input.eq(0).val().replace(/[^\d]/g,'');} else {$input =$(dom);val =$input.val().replace(/[^\d]/g,'');}
+if (!val){val ='1';}
+if (val >ends ||val 一次最多可以购买"+n+"张！");} else {$(dom).parents('ul').find('.getpassword-showmsg-cont').html('限购' + n + '张！').css('color','red');}
+}
+}
+}
+	function num(t,num,dom,resetsession,totaldom) {var $input,count,price;var $shopcartprices =$('.yl-shopcart-prices');var prices =parseInt($shopcartprices.eq(0).text());var $thisinput =$(dom).parents('dl').find('input');var ppid =$thisinput.attr('ppid');if(resetsession){$input =$('.yl-shop-chat[ppid="' + ppid + '"]');count =parseInt($input.eq(0).val());} else {$input =$('.yl-order[ppid="' + ppid + '"]');count =parseInt($input.eq(0).val());}
+price =parseInt($input.eq(0).attr('price'));var maxnum =parseInt(num);if (1 ===t) {if(count >1){prices =prices - price;--count;}else{count =1;}
+} else if (2 ===t){if(count >=maxnum){count =maxnum;}else{prices =prices + price;++count;}
+}
+if (resetsession) {resetShopCart(ppid,count,function(data){if(data.status ==0){if(data.total==".00"){$shopcartprices.text(parseInt(data.changeprices));}else{$shopcartprices.text(parseInt(data.changeprices)+parseInt(data.total));}
+$input.val(count);if (totaldom) {$(totaldom).text((data.changeprices *1).toFixed(2));}
+}
+});} else {$input.val(count);} 
+	var n =$(dom).attr('n');if (n &&n !='') {if (count ==n) {if (totaldom) {$(dom).parents('ul').next().show();$(dom).parents('ul').next().html("一次最多可以购买"+n+"张！");} else {$(dom).parents('ul').find('.getpassword-showmsg-cont').html('限购' + n + '张！').css('color','red');}
+}
+}
+}
+function alert_suss(msgInfo,msgConts) {$mixBox({boxStyle:'msg',msgInfo:msgInfo,msgConts:msgConts
+});}
+function alert_sussnew(msgInfo,msgConts) {mixBox({boxStyle:'msg',msgInfo:msgInfo,msgConts:msgConts
+});}
+	function addToFavorite() {var url =window.location.href;var title =window.document.title;try {window.external.addFavorite(url,title);}
+catch (e) {try {window.sidebar.addPanel(title,url,"");}
+catch (e) {alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请使用Ctrl+D进行添加");}
+}
+}
+function resetShopCart(ppid,count,cb){$.post('http://www.228.com.cn/ajax/updateshopcart.html',{productplayid:ppid,num:count},function(data){if (data.status ==1) {alert_suss("提示！","请先选择商品！");}else if (data.status ==2) {alert_suss("提示！","您的购物车已经空了！");}else if (data.status ==3) {alert_suss("提示！","更新购物车失败，请稍候再试！");}else{cb(data);}
+});}
+
+
+
+ 
+  DD_belatedPNG.fix('.quick-guide li img');  
+ 
+
+
+
+
+
+
+
+
+永乐票务
+
+成都站
+ 切换城市
+
+
+
+
+
+$("#search-text").suggest("http://www.228.com.cn/ajax/search",{pathURL :"http://www.228.com.cn",onSelect:function() {var pid =$(this).attr('relid');var _link="http://www.228.com.cn/ticket-"+pid+".html";document.location.href =_link;}	
+});$('#search-text').keydown(function(e){if(e.keyCode==13){if($(".ac_over").length >0){e.preventDefault();e.stopPropagation();selectCurrentResult1();}else{$('#search-but').click();}
+}
+});function searchHref(url,allkeyword,flag) {var keyword ="";if(allkeyword !=null &&allkeyword !='' &&allkeyword !='allkeyword' &&!flag) {keyword =allkeyword;}
+url +=url.lastIndexOf('/') ==url.length-1?'':'/';if(keyword &&allkeyword !='allkeyword') {keyword =$.trim(keyword);var suffix =url.substr(url.length-3);if(suffix =='/s/'){url +=keyword+'/';}else {url =url.substring(0,url.length-1);url +='-'+keyword+'/';}
+}
+location.href =url;}
+
+
+function searchQ(objId){var keyword =$.trim($(objId).val());var reg =/[(#)(\%)(\-)(\|)(\/)(\\)(\,)(\')]+/;var result =keyword.match(reg);if(result ==null ||result =="" ||result ==undefined){var _link="http://www.228.com.cn/s/"+(keyword==""?"":keyword+"/")
+window.open(_link,"_blank");}else{mixBox({opacity:70,background:'#666',boxStyle:'error',msgHead:'提示信息',msgInfo:'操作失败',msgConts:'搜索关键包含非法字符'+'"'+result+'"' 
+	});$('#search-text').val("");}
+}
+
+
+热门：
+苏打绿
+韩红
+小野丽莎
+张韶涵
+周华健
+维塔斯
+
+
+ 
+
+
+积分商城
+
+
+精彩专题
+
+
+票面真伪
+
+
+新闻资讯
+
+
+场馆库
+
+
+
+
+
+
+
+
+首页
+演唱会
+戏剧
+古典
+戏曲综艺
+亲子
+体育
+电影
+故宫订票
+国家大剧院
+
+
+
+
+
+
+
+成都商品分类
+
+
+演唱会
+
+流行
+摇滚
+民族
+民谣
+日韩
+美声
+音乐节
+其他
+
+
+
+话剧舞台剧
+话剧
+歌剧
+音乐剧
+歌舞剧
+其他
+
+
+
+音乐会
+
+交响
+独奏
+钢琴
+室内乐
+声歌
+民乐
+其他
+
+
+
+舞蹈芭蕾
+
+芭蕾舞
+民族舞
+现代舞
+舞剧
+西方舞
+其他
+
+
+
+戏曲综艺
+
+京剧
+戏曲
+相声小品
+马戏杂技
+魔术
+综艺
+其他
+
+
+
+体育赛事
+
+足球
+篮球
+排球
+网球
+户外运动
+水上运动
+其他球类
+综合竞技
+
+
+
+儿童亲子
+
+儿童剧
+童声合唱
+儿童音乐会
+儿童活动
+其他
+
+
+
+休闲娱乐
+电影
+旅游景点
+温泉滑雪
+展会讲座
+兑换卡/券
+主题娱乐
+活动派对
+代金券
+其他
+
+
+
+全部票品
+
+
+
+
+
+function CityCsjx() {return "cd";}
+$(function(){var url ="http://www.228.com.cn/ajax/findPronumByFconfig.html";$.post(url,function(data){if(null !=data &&data !=''){var html =[];$.each(data.districtList,function(i,f){if(data.districtList &&null !=f.fcitys &&f.fcitys !=''){html.push("");html.push("	");html.push("	"+f.NAME+"");$.each(data.districtList[i].fcitys,function(ii,ff){html.push("" + ff.CITYNAME + ""+ff.PRODUCTNUM+"");});html.push("");html.push("");}
+})
+$("#City_City").html(html.join(''));}
+$('.city-dl:last').css('border-bottom','0 none');});var url ="http://www.228.com.cn/ajax/findprotype.html";$.post(url,function(data){if(data &&data !=''){var html =[];var c_t ="-";$.each(data.protypea,function(i,a){if(a &&a.PRODUCTTYPEAID){if(CityCsjx() ==''){c_t ="";}
+html.push("");html.push("");html.push(a.NAME);html.push("");if(a.protypeb){$.each(a.protypeb,function(j,b){if (b){html.push("" + b.BNAME + "");}
+});}
+html.push("");}
+});html.push("全部票品");$("#City_topcity_list").html(html.join(''));}
+});});
+
+
+ 
+
+永乐票务 >
+演唱会 >
+流行 >
+2015百度糯米音乐盛典
+
+
+
+2015百度糯米音乐盛典
+[售票中]
+
+
+(6)
+
+
+
+分享到：
+
+
+
+
+
+
+
+
+
+
+时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间：
+2015.10.31 - 2015.11.01
+场&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;馆：
+
+成都秀丽东方
+
+
+支&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;持：
+
+电子票
+返积分
+乐通卡
+电子钱包
+
+
+发货城市：
+成都
+
+
+
+温馨提示：本演出无座位，支持纸质票和电子票购买。 电子票入场方式如下： 1、持身份证到成都永乐票务前台兑换纸质票入场 2、持身份证到演出现场兑换纸质票入场
+
+
+
+
+
+日期/场次：
+
+
+2015-10-31 周六 15:00
+
+2015-11-01 周日 15:00
+
+2015-10-31-2015-11-01-两日通票
+
+
+
+
+
+
+
+
+
+
+
+选择价格：
+
+
+258(学生票)
+
+
+288(普通票)
+
+
+330(VIP票)
+
+
+258(学生票)
+
+
+288(普通票)
+
+
+330(VIP票)
+
+
+499(联票)
+
+
+
+注：选择已售完票价可进行缺货登记，建议您购买现货商品。
+
+您已选择：
+
+
+
+
+
+
+
+
+
+此商品不能上门自取，并且演出前三天无法快递配送，目前已不能购买，给您带来的不便，敬请谅解。
+
+
+
+
+
+
+全部演出详情
+
+
+
+
+日期/场次
+选择价格
+
+
+
+2015-10-31 周六 15:00
+
+
+
+
+258(学生票)
+
+
+
+288(普通票)
+
+
+
+330(VIP票)
+
+
+
+
+
+2015-11-01 周日 15:00
+
+
+
+
+258(学生票)
+
+
+
+288(普通票)
+
+
+
+330(VIP票)
+
+
+
+
+
+2015-10-31-2015-11-01-两日通票
+
+
+
+
+499(联票)
+
+
+
+
+
+
+
+您已选择：
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+演出信息
+购票说明
+在线问答
+
+
+
+
+
+
+
+
+基本信息
+
+
+演出时间：
+2015.10.31 - 2015.11.01
+
+演出场馆：
+成都秀丽东方
+
+演出时长：
+以现场为准
+
+入场时间：
+以场馆规定为准
+
+
+艺人团体：
+林志炫、许巍、林宥嘉、萧敬腾、黑豹、郝云等
+
+
+注意事项：
+a)演出详情仅供参考，具体信息以现场为准；b)1.2米以下儿童谢绝入场，1.2米以上儿童需持票入场。
+
+演出详情
+
+温馨提示：1、258价位为学生票，学生票需持票和本人学生证入场。2、入园时间：2015.10.31 - 2015.11.01 &nbsp;11:003、演出时间：2015.10.31 - 2015.11.01 &nbsp;15:004、VIP票在现场有靠近舞台的专门区域“十一”小长假就这样过去了，有没有‘梦一场’的赶脚？你是否感觉到：头晕眼花，情绪焦虑，吃啥啥无味呢……。恭喜你，患上了“节后综合征”！但是！不要担心~好消息：2015百度糯米音乐盛典，邀你10月31日，11月1日两天，一起嗨翻全场！！1、如果你去音乐节是为了爽，撒泼耍疯肆无忌惮，请带东西越少越好。2、如果你去音乐节是为了看某些乐队，或者是跟着大部队一起去的，记得准备拉风的大旗。3、如果你去音乐节是为了交友，那么一定要往最活跃的人群里钻，只有他们才惦记着跟更多陌生人玩儿。4、如果你去音乐节是为了长见识，那就拿着相机，看见什么拍什么，有什么热闹凑什么热闹。5、如果你去的音乐节是小清新的，请记得打扮得小清新一些。不用惦记死墙、大风车什么的了，只要自拍、互拍、发微博就好了。6、如果你去的音乐节比较迷幻，请记得一定要变身后摇青年，听音乐的时候闭上眼睛要么仰着头要么低着头，一定要非常沉醉，不然你会打扰其他人听音乐的！10月31日，百度糯米音乐盛典即将拉开大幕，林志炫、许巍、林宥嘉、萧敬腾、黑豹、郝云……悉数亮相，跟你一起嗨翻蓉城！超豪华明星阵容从伴随70后、80后整个成长时光的林志炫、许巍、黑豹，到现在被90后、00后热捧的林宥嘉、萧敬腾，音乐盛典上跨年龄的嘉宾组合，将让全场观众打破代沟，找寻大家的集体回忆和那些渐行渐远的青春故事。在为期两天的音乐盛典中，十余位歌手悉数登场，轮番开唱，为观众们演绎众多耳熟能详的歌曲，强大的明星阵容，激情的演出舞台，无论你是摇滚乐迷、爵士乐迷、嘻哈乐迷，在这里，都能找到你的菜！狂欢大party除了在音乐质量本身下功夫，本次音乐盛典还提出“要打造一场革新的音乐盛典”的口号，为蓉城市民带来一场好玩、好吃、好音乐的狂欢大party，听得好，吃得爽，玩的更需要嗨！汇集成都本土美食和东南亚著名的美食的美食一条街，为观众们全方位补充能量，享受好吃聚集的创新体验。而近景魔术、小丑军团、特色舞蹈等丰富的活动形式，更是让音乐盛典好玩的主题精彩纷呈。休息区设立的梦想舞台、达人秀场、萌宠大本营、音乐极限等区域则将为观众提供一个展示自我的平台，有创意，就敢来！百度糯米音乐盛典秋季音乐大派对，就为给您好听的、好吃的、好看的、好玩的，让您听得安逸，吃得爽，玩得开心！这里大咖云集，许巍、郝云、林志炫、林宥嘉、萧敬腾等大牌强势加入，泰然阿修罗、液氧罐头、马赛克等乐队嗨翻全场。不管您爱摇滚还是钟情流行，也不管您是重口味还是小清新，都能在现场找到心中所爱。只要您喜欢，百度挑给您，糯米摇给您，给您最美好最暖心的音乐享受； 这里美食扎堆，百余种美食煎炸烤蒸煮、酸甜苦辣咸都能让您流连忘返； 这里还有成都最好的街头艺术表演、最有趣的街头杂耍、最柔软的草地，伴您度过愉快的时光。音乐盛典地址：成都市锦江区锦江大道湿地路秀丽东方景区（正大门为唯一观众检票入口，正大门停车场提供给观众停放车辆）
+
+
+特别提示
+售前提示
+
+1. 为避免快递配送不能及时送达，演出距开场时间少于3天时不提供【快递配送】服务，请您谅解！您可以选择选择电子票或在线支付后上门自取纸质票。 点击查看上门取票地址 >>
+2. 凡演出票类商品，开票时间一般为演出前二到四周，正式开票后客服会第一时间电话联系您，请保持电话畅通。
+3. 预售演出票品，准确票价及数量以最终正式开票信息为准。
+4. 预售阶段完成的订单，开票后信息若有变更，以客服人员最终电话确认为准。
+
+支付方式
+网上银行（招商银行等），支付平台（支付宝等），转账汇款（招商银行等），货到付款 查看详情 >>
+
+特别提示
+普通购买流程
+
+选座购买流程
+
+
+电话订购
+全国统一订票电话：4006-228-228
+
+上门订购
+ &nbsp; &nbsp;永乐成都分站 &nbsp; &nbsp;办公地址：四川省成都市青羊区顺城大街206号四川国际大厦18层A &nbsp;点击查看如何到达  &nbsp; &nbsp;营业时间：周一至周日 9:00—18:00 &nbsp; &nbsp;支付说明：可用POS机刷卡、可用现金支付 &nbsp; &nbsp;温馨提示：上门购票前请先致电客服中心查询票品的可售情况 
+
+
+
+
+FAQ问答
+|
+全部提问
+|
+我的提问
+
+
+
+
+Sokka 提问：
+2015-10-25 19:21:39
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+永乐官网
+
+
+如果买了票到时候因为有事去不了可以退不，退票政策是什么呢
+
+亲！很抱歉，由于票品的特殊性，票品一经售出非演出原因不退不换，如果订购了退票保险，请参照下票享无忧，如有疑问可拨打4006-228-228咨询。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-25 19:26:34
+
+
+
+
+
+BlingBlingBlahBlah 提问：
+2015-10-24 19:56:37
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+永乐官网
+
+
+请问研究生是否可以购买学生票？
+
+亲！学生票一般是大中小学的全日制的在校生订单，详细信息请您以现场为准。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-25 10:04:25
+
+
+
+
+
+._⒈亓錢_ 提问：
+2015-10-21 01:07:27
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+WAP站
+
+
+永乐现在卖了多少票出去了，去的时候人会有多少？？
+
+亲！很抱歉，暂无具体相关信息，请您以现场情况为准。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-21 10:03:54
+
+
+
+
+
+wap189****9190 提问：
+2015-10-20 10:56:06
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+永乐官网
+
+
+我想问一下，10月31日那天下午是3点开始，那么几点结束呢。还有就是许巍是最后一个出来吗
+
+亲！晚上10点结束，节目安排以现场为准哦。感谢支持，下载永乐APP尽享多彩生活！&nbsp;
+永乐客服 回答于： 2015-10-20 11:34:49
+
+
+
+
+
+大小姐 提问：
+2015-10-19 22:27:05
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+iOS客户端
+
+
+萧敬腾是好多号
+
+亲！11月1日哦，具体情况请您以现场为准，如有疑问可拨打4006-228-288客服热线咨询。感谢支持，下载永乐APP尽享多彩生活！&nbsp;
+永乐客服 回答于： 2015-10-20 09:21:40
+
+
+
+
+
+183****5956 提问：
+2015-10-19 17:41:23
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+Android客户端
+
+
+请问可以提前多久去占位置？？
+
+亲！演出没有座位哦~全是站票。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-19 17:42:49
+
+
+
+
+
+837525030 提问：
+2015-10-17 19:36:53
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+Android客户端
+
+
+什么时候可以去取纸质票？好像是20号以后，到时候会通知么
+
+亲！一般是没有通知的，建议您查询到订单状态为待取货后上门领取票品，如有疑问可拨打4006-228-228咨询。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-17 19:39:41
+
+
+
+
+
+开心大侠 提问：
+2015-10-13 20:45:33
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+iOS客户端
+
+
+什么是联票
+
+亲！就是两天都可以使用的票品哦。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-13 20:49:32
+
+
+
+
+
+837525030 提问：
+2015-10-13 15:15:26
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+Android客户端
+
+
+纸质票和电子票有什么区别？电子票还是要去兑换纸质票？
+
+亲！订购电子票的客户需凭借提交订票时的订单号和手机号码，到现场换取纸质票；订购纸质票的客人收到票后直接持票入场即可，如有疑问可拨打4006-228-228客服热线咨询。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-13 15:18:37
+
+
+
+
+
+田驰驰 提问：
+2015-10-12 21:10:22
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+iOS客户端
+
+
+林宥嘉是哪一天？
+
+亲！11月1日哦，具体情况请您以现场为准，如有疑问可拨打4006-228-288客服热线咨询。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-12 21:12:13
+
+
+
+
+
+查看全部 (13) >>
+
+
+
+我有意见或建议，跟永乐说说 >>
+温情提示：为了您的个人信息安全，请勿在留言中透露联系方式！ 
+
+
+
+
+您的称呼：
+
+请登录后提交发表登录 | 注册
+
+
+
+您的问题：
+
+
+
+验&nbsp;&nbsp;证&nbsp;&nbsp;码：
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+在线问答
+
+
+FAQ问答
+|
+全部提问
+|
+我的提问
+
+
+
+
+Sokka 提问：
+2015-10-25 19:21:39
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+永乐官网
+
+
+如果买了票到时候因为有事去不了可以退不，退票政策是什么呢
+
+亲！很抱歉，由于票品的特殊性，票品一经售出非演出原因不退不换，如果订购了退票保险，请参照下票享无忧，如有疑问可拨打4006-228-228咨询。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-25 19:26:34
+
+
+
+
+
+BlingBlingBlahBlah 提问：
+2015-10-24 19:56:37
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+永乐官网
+
+
+请问研究生是否可以购买学生票？
+
+亲！学生票一般是大中小学的全日制的在校生订单，详细信息请您以现场为准。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-25 10:04:25
+
+
+
+
+
+._⒈亓錢_ 提问：
+2015-10-21 01:07:27
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+WAP站
+
+
+永乐现在卖了多少票出去了，去的时候人会有多少？？
+
+亲！很抱歉，暂无具体相关信息，请您以现场情况为准。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-21 10:03:54
+
+
+
+
+
+wap189****9190 提问：
+2015-10-20 10:56:06
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+永乐官网
+
+
+我想问一下，10月31日那天下午是3点开始，那么几点结束呢。还有就是许巍是最后一个出来吗
+
+亲！晚上10点结束，节目安排以现场为准哦。感谢支持，下载永乐APP尽享多彩生活！&nbsp;
+永乐客服 回答于： 2015-10-20 11:34:49
+
+
+
+
+
+大小姐 提问：
+2015-10-19 22:27:05
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+iOS客户端
+
+
+萧敬腾是好多号
+
+亲！11月1日哦，具体情况请您以现场为准，如有疑问可拨打4006-228-288客服热线咨询。感谢支持，下载永乐APP尽享多彩生活！&nbsp;
+永乐客服 回答于： 2015-10-20 09:21:40
+
+
+
+
+
+183****5956 提问：
+2015-10-19 17:41:23
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+Android客户端
+
+
+请问可以提前多久去占位置？？
+
+亲！演出没有座位哦~全是站票。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-19 17:42:49
+
+
+
+
+
+837525030 提问：
+2015-10-17 19:36:53
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+Android客户端
+
+
+什么时候可以去取纸质票？好像是20号以后，到时候会通知么
+
+亲！一般是没有通知的，建议您查询到订单状态为待取货后上门领取票品，如有疑问可拨打4006-228-228咨询。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-17 19:39:41
+
+
+
+
+
+开心大侠 提问：
+2015-10-13 20:45:33
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+iOS客户端
+
+
+什么是联票
+
+亲！就是两天都可以使用的票品哦。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-13 20:49:32
+
+
+
+
+
+837525030 提问：
+2015-10-13 15:15:26
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+Android客户端
+
+
+纸质票和电子票有什么区别？电子票还是要去兑换纸质票？
+
+亲！订购电子票的客户需凭借提交订票时的订单号和手机号码，到现场换取纸质票；订购纸质票的客人收到票后直接持票入场即可，如有疑问可拨打4006-228-228客服热线咨询。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-13 15:18:37
+
+
+
+
+
+田驰驰 提问：
+2015-10-12 21:10:22
+&nbsp;&nbsp;&nbsp;&nbsp;来自
+iOS客户端
+
+
+林宥嘉是哪一天？
+
+亲！11月1日哦，具体情况请您以现场为准，如有疑问可拨打4006-228-288客服热线咨询。感谢支持，下载永乐APP尽享多彩生活！
+永乐客服 回答于： 2015-10-12 21:12:13
+
+
+
+
+
+查看全部 (13) >>
+
+
+
+我有意见或建议，跟永乐说说 >>
+温情提示：为了您的个人信息安全，请勿在留言中透露联系方式！ 
+
+
+
+
+您的称呼：
+
+请登录后提交发表登录 | 注册
+
+
+
+您的问题：
+
+
+
+验&nbsp;&nbsp;证&nbsp;&nbsp;码：
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+最近浏览 
+
+{name}
+
+
+
+您可能喜欢的演出 
+
+
+
+
+纯粹—张韶涵2015世界巡回演唱会成都站
+
+2015.10.31
+
+成都体育中心
+
+立即购买 >>
+
+
+
+
+2015百度糯米音乐盛典
+
+2015.10.31 - 11.01
+
+成都秀丽东方
+
+立即购买 >>
+
+
+
+
+周华健"今天唱什么"世界巡回演唱会成都站
+
+2015.11.14
+
+成都体育中心
+
+立即购买 >>
+
+
+
+
+苏打绿2015《再遇见》世界巡回演唱会—成...
+
+2015.11.07
+
+成都体育中心
+
+立即购买 >>
+
+
+ 
+
+秋日私语—小野丽莎2015中国巡演成都站
+
+2015.11.08
+
+四川省锦城艺术宫
+
+立即购买 >>
+
+
+
+
+永乐微博 
+
+
+
+最新成都演唱会
+
+2015百度糯米音乐盛典
+魅声媚影 神话再临—2015维塔斯中国巡演成都演唱会
+韩红"当红不让"2015全国巡回演唱会成都站
+苏打绿2015《再遇见》世界巡回演唱会—成都站
+纯粹—张韶涵2015世界巡回演唱会成都站
+秋日私语—小野丽莎2015中国巡演成都站
+周华健"今天唱什么"世界巡回演唱会成都站
+
+
+
+
+
+
+
+
+
+
+
+缺货登记
+
+
+
+
+* 此票价暂时缺货，您可以进行缺货登记。
+* 我们将记录你的基本信息，待到货后我们将第一时间通知您。
+* 若始终缺货，永乐票务将不做另行通知。
+
+
+登记商品：
+
+
+
+2015百度糯米音乐盛典
+
+
+已登记场次：
+
+
+
+
+新登记场次：
+
+
+
+
+
+
+
+数量：
+
+
+
+
+(最多可登记30张)
+
+
+
+手机号码：
+
+请正确输入号码方便我们与您联系
+
+
+附言：
+附言信息请不要超过100个字
+
+
+
+&nbsp;
+
+
+
+
+
+
+
+购物车
+
+
+
+
+
+票品已成功加入购物车！
+
+购物车共有  件商品，合计  元
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+购物车为空，开始购物吧~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(function() {$(".relt-prev").click(function() {var num =$("#qhdj_num").val() *1;if (num =30) {$("#qhdj_num").val(30);} else {num++;$("#qhdj_num").val(num);$("#qhdj_productnum").html(num+"张");}
+});$.getJSON("http://www.228.com.cn/ajax/curUserInfo.html",function(data){if(data &&data.userInfo &&data !=''){$("#noLogin1").hide();$("#noLogin2").hide();$("input[name='phone']").val(data.userInfo.phone);$("input[name='email']").val(data.userInfo.email);$("input[name='truename']").val(data.userInfo.truename);var html =[];html.push('您的称呼：');html.push(data.userInfo.nickname);$("#onlineName1").html(html.join(""));$("#onlineName2").html(html.join(""));}else{$("#noLogin1").show();$("#noLogin2").show();}
+});$.ajax({data :{productid:'74902683'},type :"post",dataType :"json",async :false,url :getPath() + "/ajax/quesAndAnser",success :function(data){if(data !=null &&data !=undefined){if(data.cusFlag ==0){$("#down_faq").attr("class","red");$("#right_faq").attr("class","red");var quesInfos ="";quesInfos +=''
+ if(data.quesInfosLen>10){var _html ="查看全部 ("+data.quesInfosLen+") >>"
+$("#look_all_span1").html(_html);$("#look_all_span2").html(_html);}
+$.each(data.quesInfos,function(k,v){if(kQ'+v["GQUESTION"]+'A'+v["GANSWER"]+''
+}else{quesInfos +='Q'+v["SQUESTION"]+'A'+v["SANSWER"]+''
+}
+}
+})
+quesInfos +=''
+$("#online_ask_down").html(quesInfos);$("#online_ask_right").html(quesInfos);}else if(data.cusFlag ==1){$("#down_all").attr("class","red");$("#right_all").attr("class","red");}
+}
+}
+});try {if($("#Jprice").find("li.over") &&$("#Jprice").find("li.over").length ==7){$("#float-button").html("");}
+} catch (e) {}
+});$(window).scroll(function(){setTimeout(function(){if($("#JlivesHd").css("position")=="fixed")
+{$("#float-button").css({"display":"block"});}else{$("#float-button").css({"display":"none"});}
+},300);$("#float-button").click(function(){$("#float-button").css({"display":"none"});});});updateProducts();var productid ="74902683";if(productid=="63046717"){ghost();}
+	function ghost(){var $w =$(document).width();var $h =$(document).height();var $img =$("#ghost");var $imgw =$img.width();var $imgh =$img.height();var $h =$(document).height()+730;var opacity =20;var background ="#000000";$("body").append('').hide().show();$("#ghost").css('background','url(http://static.228.com.cn/resources/images/pro-rgqwl.jpg)');$("#ghost").show();};$("#ghostClick").on('click',function() {var ghostCode =$("#ghostCode").val();var url =getPath()+"/ajax/ghost";if(ghostCode!=null &&ghostCode !="" &&ghostCode!=undefined){$.post(url,{ghostCode:ghostCode},function(data){if(data =="1"){$("#pageProduct").hide();$("#ghost").hide();$("#ghostMsg").html("");};if(data =="0"){$("#ghostMsg").html("通关密码无效");return;};});}else{$("#ghostMsg").html("请输入通关密码");return;};});var productidgolf ="74902683";if(productidgolf=="63375370"){golf();}
+	function golf(){var $w =$(document).width();var $h =$(document).height();var $img =$("#golf");var $imgw =$img.width();var $imgh =$img.height();var $h =$(document).height()+730;var opacity =60;var background ="#000000";$("body").append('').hide().show();$("#golf").css('background','url(http://static.228.com.cn/resources/images/pro-golf.jpg)');$("#golf").show();};$("#golfClick").on('click',function() {var golfCode =$("#golfCode").val();var url =getPath()+"/ajax/golf";if(golfCode!=null &&golfCode !="" &&golfCode!=undefined){$.post(url,{golfCode:golfCode},function(data){if(data =="1"){$("#pageProduct").hide();$("#golf").hide();$("#golfMsg").html("");};if(data =="0"){$("#golfMsg").html("通关密码无效");return;};});}else{$("#golfMsg").html("请输入通关密码");return;};});var productidLp ="74902683";if(pids.join(',').indexOf(productidLp)>=0){var j =-1;$(pids).each(function(i){if(pids[i]==productidLp){j=i;return;}
+})
+$(".lp-con a").attr("href","http://www.228.com.cn/ticket-"+pids2[j]+".html");$.getJSON("http://www.228.com.cn/ajax/linkinParkState.html",function(data){if(data &&data !=''){if(data.flag==1){LinkinPark();}
+}
+});}	
+	function LinkinPark(){var $w =$(document).width();var $h =$(document).height();var $img =$("#linkinPark");var $imgw =$img.width();var $imgh =$img.height();var $h =$(document).height()+730;var opacity =60;var background ="#000000";$("body").append('').hide().show();$("#linkinPark").css('background','url(http://static.228.com.cn/resources/images/LP.jpg)');$("#linkinPark").show();};$("#lpClick").on('click',function() {var lpCode =$("#lpCode").val();var url =getPath()+"/ajax/linkinPark.html";if(lpCode!=null &&lpCode !="" &&lpCode!=undefined){$.post(url,{lpCode:lpCode},function(data){if(data =="1"){$("#pageProduct").hide();$("#linkinPark").hide();$("#lpMsg").html("");}else{$("#lpMsg").html("通关密码错误，请重新输入！");return;};});}else{$("#lpMsg").html("请输入通关密码");return;};});var shadeFlag ="0";if(shadeFlag ==1){productShade();}
+	$("#shadeClick").on('click',function() {var shadeCode =$("#shadeCode").val();var shadePid ="74902683";var url =getPath()+"/ajax/shadeCodeState.html";if(shadeCode!=null &&shadeCode !="" &&shadeCode!=undefined){$.post(url,{shadeCode:shadeCode,shadePid:shadePid},function(data){if(data =="1"){$("#pageProduct").hide();$("#pro-id").hide();$("#shadeMsg").html("");}else{$("#shadeMsg").html("通关密码有误");return;};});}else{$("#shadeMsg").html("请输入通关密码");return;};});function productShade(){var $w =$(document).width();var $h =$(document).height();var $img =$("#pro-id");var $imgw =$img.width();var $imgh =$img.height();var $h =$(document).height()+730;var opacity =60;var background ="#000000";$("body").append('').hide().show();$("#pro-id").show();};$('.btn-sub').on('click',function() {var customers ="";if(customers ==null ||customers =="" ||customers ==undefined){return;}
+	var $form =$(this).parents("form");var errorspan =$form.find('.yl-error-msg');var replycontent =$form.find('#replycontent').val();if (replycontent =='') {errorspan.text("您还没有留下问题哦！");return false;}
+var checkCode =$form.find('#checkCode').val();if (checkCode =='') {errorspan.text("请输入验证码！");return false;} 
+_ajaxform(this,function(data) {if (data.status =='1') {errorspan.text("抱歉，内容应该在100字内 :(");}
+if (data.status =='2') {errorspan.text("提交问题出了点小意外，请稍后再试。");}
+if (data.status =='3') {errorspan.text("验证码不正确！");}
+if (data.status =='4') {errorspan.text("客服已经收到您的提问，请休息一下稍后再来。");}
+if (data.status =='5') {errorspan.text("未登录用户不允许提问！");}
+if (data.status =='0') {location.reload();}
+;});});$('#replycontent').change(function() {var errorspan =$('.yl-error-msg');var count =Number($(this).val().length);if (count >100) {errorspan.text("已超过" + (count - 100) + "个字。");}
+;});function _ajaxform(selector,cb) {var $form =$(selector).parents("form");$.post($form.attr("action")
+,$form.serialize()
+,function (data){if(data.status ==0){$form.get(0).reset();}
+cb(data);}
+,'json'
+);};function updateProducts() {var $ylrecent =$('#m-mod');var products =$.cookie('products');var ppid ="74902683";var name ="2015百度糯米音乐盛典";if (products !=null &&products.length >0) {var productinfo =products.split('^');var keys =productinfo[0].split(',');var values =productinfo[1].split(',');var $ul =$ylrecent.find('ul');var html =$ul.html();$ul.find('li').remove();for (var i =keys.length - 1;i >=0;i--) {$ul.append(html.replace(/{ppid\s*}/g,keys[i]).replace(/{name\s*}/g,values[i]));}
+$ylrecent.show();var place =$.inArray(ppid,keys);if (place ==-1) {keys.push(ppid);values.push(name);if (keys.length >6) {keys.splice(0,keys.length - 6);values.splice(0,values.length - 6);}
+var params =keys.join(',') + '^' + values.join(',');$.cookie('products',params,{expires :7,path :'/'
+});}
+;} else {var params =ppid + '^' + name;$.cookie('products',params,{expires :7,path :'/'
+});$ylrecent.hide();}
+;}
+	
+ 
+	function poplogin() {$('#jump-login').minBox({});}
+
+function deleteTicket(customerid,productplayid,obj){var url =getPath()+"/ajax/deleteShort";$.post(url,{productplayid:productplayid,customerid:customerid},function(data){if(data =='0'){var ul=obj.parentNode.parentNode;var tbody=ul.parentNode;tbody.removeChild(ul);}
+},'json');}
+
+var bdate ='2015-10-31';var edate ='2015-11-01';var timer =(bdate==edate) ?bdate :bdate + '至' + edate;var htmlurl =window.location.href;var venue ='成都秀丽东方';var tuijie ="强烈推荐给大家"+" "+htmlurl+"（分享自@永乐票务 ）";var sharrCont =$("#share-cont").val();var cont ="怎能错过【"+sharrCont+"】，" + timer + "，" + venue + "，" + tuijie;var imgsrc;imgsrc ='http://static.228.cn/upload/2015/10/10/AfterTreatment/1444463451549_r4f4-0.jpg';window._bd_share_config ={"common" :{"bdSnsKey" :{"tsina" :"282682861"},"bdText" :cont,"bdMini" :"2","bdMiniList" :false,"bdPic" :imgsrc,"bdStyle" :"0","bdSize" :"32"
+},"share" :{}
+};with (document)0[(getElementsByTagName('head')[0] ||body).appendChild(createElement('script')).src ='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];var appid ='gh_5f58ae0646df';function shareFriend(imgUrl,descContent,ptitle) {WeixinJSBridge.invoke('sendAppMessage',{"appid":appid,"img_url":imgUrl,"img_width":"640","img_height":"640","link":"http://h5.228.cn/","desc":descContent ||document.title,"title":ptitle ||document.title
+},function(res) {});}
+function shareTimeline(imgUrl,descContent,ptitle) {WeixinJSBridge.invoke('shareTimeline',{"img_url":imgUrl,"img_width":"640","img_height":"640","link":"http://h5.228.cn/","desc":descContent ||document.title,"title":ptitle ||document.title
+},function(res) {});}
+	document.addEventListener('WeixinJSBridgeReady',function onBridgeReady() {WeixinJSBridge.on('menu:share:appmessage',function(argv){shareFriend(imgsrc,cont,"2015百度糯米音乐盛典
+
+	
+	 
+	  DD_belatedPNG.fix('.main .date .date-ul li.on,.main .date .date-ul li.over,.s-elec,.s-seat,.s-inte,.s-money,.s-ltk,.s-pxwy,.s-pay,.main .favor s,.tour-mid li a,.online-reply .dot,.fbox .t-dot');  
+	 
+	
+var _ozprm ="cid99=142500";
+
+
+
+快乐生活 —源自多彩永乐
+
+ 新手指南 
+ 购票流程 
+ 发票说明 
+ 预订说明 
+ 退换及缺货说明 
+ 意见与建议 
+
+
+ 订票方式 
+ 电话订票 
+ 在线订票 
+ 上门购票 
+ 大客户团购 
+
+
+ 配送说明 
+ 送货上门 
+ 上门自取 
+ 电子票 
+
+
+ 支付方式 
+ 在线支付 
+ 银行汇款 
+ 货到付款 
+ 上门付款 
+ 电子钱包 
+
+
+ 特色服务 
+ 票享无忧 
+ 电子钱包 
+ 大客户团购 
+ 永乐乐通卡 
+ 会员积分 
+ 先付先抢 
+ 现金券 
+
+
+
+
+ 真伪查询 
+ 在线选座 
+ 电子票 
+ 手机客户端 
+ 邮件订阅 
+
+
+
+ 关于永乐丨永乐大事记丨品牌识别丨合作招商丨服务协议丨隐私声明丨招聘信息丨联系我们丨友情链接丨网站地图丨官方微博 
+
+
+版权所有 永乐票务 Copyright©2003-2015 All Rights Reserved 北京春秋永乐文化传播有限公司
+中国领先的演出门票预订综合性票务网站。为您提供各类演出门票网上订票服务。 
+
+中国互联网诚信联盟
+360绿色网站
+北京12318文化市场举报热线
+京ICP备030924号&nbsp;&nbsp;网安备11010102000758号
+
+
+(function (){var _kxs =document.createElement('script');_kxs.id ='kx_script';_kxs.async =true;_kxs.setAttribute('cid','kx_verify');_kxs.src =('https:' ==document.location.protocol ?'https://ss.knet.cn' :'http://rr.knet.cn')+'/static/js/icon3.js?sn=e130726110100417830nnm000000&tp=icon3';_kxs.setAttribute('size',2);var _kx =document.getElementById('kx_verify');_kx.parentNode.insertBefore(_kxs,_kx);})();
+
+
+
+
+
+(function(){document.getElementById('___szfw_logo___').oncontextmenu =function(){return false;}})();
+
+
+
+
+
+
+ 
+    DD_belatedPNG.fix('.booking,.advance-booking,.no1,#sort h3 a,#sort h3,.quick-menu li.myyl a,.quick-menu li.guide a,.copyright a,.change-city,#main-nav li,*html #rigpic a');  
+ 
+var _agt =_agt ||[];_agt.push(['_atscu','AG_383620_VERK' ]);_agt.push(['_atsdomain','http://www.228.com.cn' ]);(function() {var ag =document.createElement('script');ag.type ='text/javascript';ag.async =true;ag.src =(document.location.protocol =='https:' ?'https' :'http')
++ '://' + 't.agrantsem.com/js/ag.js';var s =document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ag,s);})();
+
+var _ozuid ="";
+
+function GetQueryString(name)
+{var reg =new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");var r =window.location.search.substr(1).match(reg);if(r!=null)
+return unescape(r[2]);return null;}
+String.prototype.endWith=function(str){if(str==null||str==""||this.length==0||str.length>this.length)
+return false;if(this.substring(this.length-str.length)==str)
+return true;else
+return false;return true;}
+String.prototype.startWith=function(str){if(str==null||str==""||this.length==0||str.length>this.length)
+return false;if(this.substr(0,str.length)==str)
+return true;else
+return false;return true;}
+function isNullOrEmpty(strVal) {strVal =$.trim(strVal);if (strVal =='' ||strVal ==null ||strVal ==undefined) {return true;} else {return false;}
+}
+$.post("http://www.228.com.cn/ajax/findlm.html",function(data){var $source =GetQueryString("source");if(data.indexOf($source)!=-1){var $unionmsg =GetQueryString("subid");var expiresDate=new Date();var t =1;var unionList=new Array("fst","yimadsp","wushuangdsp","wushuangdsp1","wushuangdsp2","wushuangdsp3","wushuangdsp4","brtr");var unionList2 =new Array("weiyi","zhitui","caibei","duomai","LTINFO","yiqifa");if(!isNullOrEmpty($source) &&!$source.endWith("login")){if(unionList.join(',').indexOf($source)>=0){t =7;}
+if(unionList2.join(',').indexOf($source)>=0){t =30;}
+expiresDate.setTime(expiresDate.getTime() + (t *24 *60 *60 *1000));$.cookie("source",$source,{path:"/",expires:expiresDate,domain:".228.com.cn" });if(isNullOrEmpty($unionmsg)){$unionmsg ='';}	
+$.cookie("unionmsg",$unionmsg,{path:"/",expires:expiresDate,domain:".228.com.cn" });}	
+}
+});
+
+
+var _tracDatakType = 'web'; //标记数据来源，参数是web和wap，可以为空，默认是web
+var _Schannel_website_id = 'cd';//分站编号，不存在可不写此变量或者留空
+var _Schannel_webshop_id = '52991659';//商铺编号，不存在可不写此变量或者留空
+//[接口类型*],[商品ID*],[名称*],[编号*],[一级类别*],[二级类别*],[三级类别*],[品牌*],[用户标记],[来源标记],[商品id]
+//alert("分站编号："+"131052"+"商品ID:"+"74902683"+"名称:"+"2015百度糯米音乐盛典"+"一级类别:"+"演唱会"+"二级类别:"+"流行"+"用户ID:"+"");
+_trackData.push(['viewgoods','74902683','2015百度糯米音乐盛典','74902683','演唱会','流行','','永乐','','web','74902683']);
+
+$(function(){_adwq.push(['_setDataType','view']);if($("#customer_loginYn").val() =='Y') {_adwq.push(['_setCustomer',$("#customer_login_id").val()+'']);}
+var productId =74902683;$.ajax({data :{productId:productId},type :"POST",dataType :"json",async :false,url :getPath() + "/ajax/getProductByDSP",success :function(data){if(data !=null &&data.productId){var imgsrc =$("#pbigimg").attr("src");;var pid =null,name=null,price=null,typeid=null,type=null;pid =data.productId;name =data.name;price =data.price;typeid =data.typeId;type =data.typeName;oldPrice=data.price;productImgPath=imgsrc;status =data.status;productUrl="http://www.228.com.cn/ticket-"+data.productId+".html" 
+	pinpaiId=data.codeId;pinpaiName=data.codeName;_adwq.push(['_setItem',pid+'',name+'',price+'','1',typeid+'',type+'',+oldPrice+'',productImgPath+'',status+'',productUrl+'','',pinpaiId,pinpaiName+'']);_adwq.push(['_trackTrans' ]);}
+}
+});});
+
+
