@@ -160,6 +160,6 @@ if __name__ == '__main__':
     #     except:
     #         with open('setting_log.txt', 'a') as fd:
     #             fd.write(str(account) + ' settingfailed!\n')
-    login('username', 'password')
+    login('jing95173yan@163.com', 'mgcuvs1')
 
 

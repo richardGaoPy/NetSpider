@@ -71,8 +71,8 @@ def arguments_to_dict(args):
 def get_pincode():
     client = APIClient()
     paramDict = {}
-    paramDict['username'] = 'kalipy'
-    paramDict['password'] = 'Hdj2015'
+    paramDict['username'] = ''
+    paramDict['password'] = ''
     paramDict['typeid'] = 3040
     paramDict['timeout'] = 10
     paramDict['softid'] = 1

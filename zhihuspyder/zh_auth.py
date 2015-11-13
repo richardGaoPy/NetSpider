@@ -16,6 +16,7 @@ try:
 except:
     pass
 
+
 class Logging:
     flag = True
 
@@ -44,17 +45,21 @@ class Logging:
 # Setting Logging
 Logging.flag = True
 
+
 class LoginPasswordError(Exception):
     def __init__(self, message):
         if type(message) != type("") or message == "": self.message = u"帐号密码错误"
         else: self.message = message
         Logging.error(self.message)
 
+
 class NetworkError(Exception):
     def __init__(self, message):
         if type(message) != type("") or message == "": self.message = u"网络异常"
         else: self.message = message
         Logging.error(self.message)
+
+
 class AccountError(Exception):
     def __init__(self, message):
         if type(message) != type("") or message == "": self.message = u"帐号类型错误"
@@ -78,32 +83,7 @@ def download_captcha():
     p = re.compile(r'<Result>(.*?)</Result>', re.M)
     captcha_code = p.findall(results)[0]
     captcha_code = str(captcha_code)
-    # """
-    #     System platform: https://docs.python.org/2/library/platform.html
-    # """
-    # Logging.info(u"正在调用外部程序渲染验证码 ... ")
-    # if platform.system() == "Linux":
-    #     Logging.info(u"Command: xdg-open %s &" % image_name )
-    #     os.system("xdg-open %s &" % image_name )
-    # elif platform.system() == "Darwin":
-    #     Logging.info(u"Command: open %s &" % image_name )
-    #     os.system("open %s &" % image_name )
-    # elif platform.system() == "SunOS":
-    #     os.system("open %s &" % image_name )
-    # elif platform.system() == "FreeBSD":
-    #     os.system("open %s &" % image_name )
-    # elif platform.system() == "Unix":
-    #     os.system("open %s &" % image_name )
-    # elif platform.system() == "OpenBSD":
-    #     os.system("open %s &" % image_name )
-    # elif platform.system() == "NetBSD":
-    #     os.system("open %s &" % image_name )
-    # elif platform.system() == "Windows":
-    #     os.system("open %s &" % image_name )
-    # else:
-    #     Logging.info(u"我们无法探测你的作业系统，请自行打开验证码 %s 文件，并输入验证码。" % os.path.join(os.getcwd(), image_name) )
-    #
-    # captcha_code = raw_input( termcolor.colored("请输入验证码: ", "cyan") )
+    print captcha_code
     return captcha_code
 
 
@@ -246,6 +226,5 @@ def login(account=None, password=None):
         return True
 
 if __name__ == "__main__":
-    login(account="yuetuo084117@163.com", password="jrvfpjn91")
     # login()
     # print requests.cookies
